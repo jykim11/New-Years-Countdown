@@ -4,7 +4,7 @@ const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 
 
-const newYears = '1 Jan 2022';
+const newYears = '1 Jan 2023';
 
 function countdown() {
     const newYearsDate = new Date(newYears);
@@ -14,13 +14,13 @@ function countdown() {
 
     const days = Math.floor(totalSeconds / 3600 / 24);
     const hours = Math.floor(totalSeconds / 3600) % 24;
-    const minutes = Math.floor(totalSeconds / 60)  % 60;
+    const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    daysEl.innerHTML = days.toLocaleString(undefined, {minimumIntegerDigits: 2});
-    hoursEl.innerHTML = hours.toLocaleString(undefined, {minimumIntegerDigits: 2});;
-    minutesEl.innerHTML = minutes.toLocaleString(undefined, {minimumIntegerDigits: 2});;
-    secondsEl.innerHTML = seconds.toLocaleString(undefined, {minimumIntegerDigits: 2});;
+    daysEl.innerHTML = days.toLocaleString(undefined, { minimumIntegerDigits: 2 });
+    hoursEl.innerHTML = hours.toLocaleString(undefined, { minimumIntegerDigits: 2 });;
+    minutesEl.innerHTML = minutes.toLocaleString(undefined, { minimumIntegerDigits: 2 });;
+    secondsEl.innerHTML = seconds.toLocaleString(undefined, { minimumIntegerDigits: 2 });;
 
     console.log(days, hours, minutes, seconds);
 }
